@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NOTES</title>
+        <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+        <script defer src="{% static 'scripts/main.js' %}"></script>
+</head>
+<body>
+        <div class="header">
+                <div class="dp"></div>
+                <div class="search-wrapper">
+                        <input type="text"class="search-bar" name="search_term" placeholder="Looking for something...">
+                        <button type="submit">SEARCH</button>
+                </div>
+                <div class="settings">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </div>
+        </div>
+        <div class="user-notes">
+                <div class="card">
+                        <div class="title"></div>
+                        <div class="body"></div>
+                </div>
+        </div>
+</body>
+</html>
