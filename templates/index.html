@@ -15,17 +15,35 @@
                         <input type="text"class="search-bar" name="search_term" placeholder="Looking for something...">
                         <button type="submit">SEARCH</button>
                 </div>
-                <div class="settings">
+                <div class="settings js-click">
                         <span></span>
                         <span></span>
                         <span></span>
+                </div>
+                <div class="menu">
+                        <a><span>Settings</span></a>
+                        <a><span>Log Out</span></a>
                 </div>
         </div>
         <div class="user-notes">
+                {% for i in "12345678910111213141516171819202122232425267282930" %}
+                {% for item in notes %}
                 <div class="card">
-                        <div class="title"></div>
-                        <div class="body"></div>
+                        {% if item.title != None %}
+                        <div class="title">{{ item.title }}</div>
+                        {% endif %}
+                        <div class="card-body">{{ item.content }}</div>
                 </div>
+                {% endfor %}
+                {% endfor %}
         </div>
+        <a href="addnotes/">
+                <div class="add-note">
+                        <div class="the-button">
+                                <span></span>
+                                <span></span>
+                        </div>
+                </div>
+        </a>
 </body>
 </html>

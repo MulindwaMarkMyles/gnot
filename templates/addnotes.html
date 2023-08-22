@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ADD NOTE</title>
+	<link rel="stylesheet" href="{% static 'styles/addnotes.css' %}">
+	<script defer src="{%  static 'scripts/addnotes.js' %}" type="text/javascript"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="settings js-click">
+                        		<span></span>
+                        		<span></span>
+                        		<span></span>
+                	</div>
+                	<div class="dp"></div>
+	</div>
+	<div class="menu">
+                        <a><span>Settings</span></a>
+                        <a><span>Log Out</span></a>
+                </div>
+	<div class="note_context">
+		<input type="text" name="note_title" class="title" placeholder="Title">
+		<span class="separator"></span>
+		<textarea name="the_note" class="note" placeholder="Type something...."></textarea>
+	</div>
+	<span class="date-time-stamp"></span>
+</body>
+</html>

@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Maven+Pro:wght@400;500;600&family=Montserrat:wght@300;400;500;600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.note_context {
+	display: grid;
+	grid-template-rows: 1fr 10px 3fr;
+	height: 90vh;
+	width: 100%;
+	padding: 20px 10px;
+}
+.note,
+.title {
+	border: none;
+	padding: 10px 20px;
+	font-family: "Poppins";
+	background: none;
+	color: black;
+	font-size: 25px;
+}
+.note,
+.title[type="text"]:focus {
+	outline: none;
+}
+.note { font-size: 22px; }
+
+.note::-webkit-scrollbar {
+	width: 10px;
+}
+.note::-webkit-scrollbar-thumb {
+	background-color: grey;
+}
+.separator {
+	width: 100%;
+	height: 2px;
+	background-color: black;
+}
+.header {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	padding: 10px 50px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: 50px;
+}
+.dp {
+	width: 40px;
+	height: 40px;
+	background-color: grey;
+	border-radius: 50%;
+}
+.settings {
+        display: flex;
+        width: 40px;
+        height: 10px;
+        column-gap: 5px;
+        margin: 30px 20px;
+        cursor: pointer;
+}
+.settings span {
+        width: 10px;
+        height: 10px;
+        background: rgb(77, 76, 76);
+        border-radius: 50%;
+}
