@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ADD NOTE</title>
+	<title>VIEWNOTE</title>
 	<link rel="stylesheet" href="{% static 'styles/addnotes.css' %}">
 	<script defer src="{%  static 'scripts/addnotes.js' %}" type="text/javascript"></script>
 </head>
@@ -22,10 +22,14 @@
                         <a><span>Log Out</span></a>
                 </div>
 	<div class="note_context">
-		<input type="text" name="note_title" class="title" placeholder="Title">
+                {% if note.title != None %}
+		<div class="title">{{ note.title }} </div>
+                {% else %}
+                <div class="title">Title</div>
+                {% endif %}
 		<span class="separator"></span>
-		<textarea name="the_note" class="note" placeholder="Type something...."></textarea>
+                <div class="note">{{ note.content }}</div>
 	</div>
-	<span class="date-time-stamp dts">Edited Today.</span>
+<span class="date-time-stamp dts">Edited on {{ note.modified_date }}</span>
 </body>
 </html>

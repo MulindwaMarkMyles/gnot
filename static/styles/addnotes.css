@@ -69,3 +69,42 @@
         background: rgb(77, 76, 76);
         border-radius: 50%;
 }
+.dts {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width:100%;
+        font-family: "Maven Pro", sans-serif;
+        font-size:20px;
+        font-weight: 400;
+}
+
+.menu {
+        position: fixed;
+        right: 10px;
+        top: 60px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: left;
+        padding: 10px 10px;
+        font-size: 20px;
+        box-shadow: 10px 10px 30px rgba(128, 128, 128, 0.5);
+        border-radius: 3px;
+        z-index: 100;
+        opacity: 0;
+        transition: 0.1s all linear;
+        font-family: "Maven Pro";
+}
+.menu a {
+        cursor: pointer;
+        transition: 0.1s all linear;
+        font-weight: 500;
+}
+.menu a:hover {
+        color: grey;
+}
+.show {
+        opacity: 1;
+}
