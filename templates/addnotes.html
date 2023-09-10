@@ -21,11 +21,14 @@
                         <a><span>Settings</span></a>
                         <a><span>Log Out</span></a>
                 </div>
-	<div class="note_context">
-		<input type="text" name="note_title" class="title" placeholder="Title">
-		<span class="separator"></span>
-		<textarea name="the_note" class="note" placeholder="Type something...."></textarea>
-	</div>
+        <form method="POST"> {% csrf_token %}
+                <div class="note_context">
+                        <input type="text" name="note_title" class="title" placeholder="Title">
+                        <span class="separator"></span>
+                        <textarea name="the_note" class="note" placeholder="Type something...."></textarea>
+                </div>
+                <input type="submit" class="submit-button">
+        </form>
 	<span class="date-time-stamp dts">Edited Today.</span>
 </body>
 </html>

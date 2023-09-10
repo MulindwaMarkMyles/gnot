@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CREDENTIALS</title>
+        <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+</head>
+<body>
+        <form method="POST">
+                {% csrf_token %}
+                <div class="the_form">
+                        <span>REGISTER</span>
+                        <input type="text" name="firstname" class="firstName" placeholder="First name">
+                        <input type="text" name="surname" class="surName" placeholder="Surname">
+                        <input type="text" name="username" class="userName" placeholder="username">
+                        <input type="text" name="password" class="password" placeholder="Password">
+                        <input type="Submit">
+                </div>
+        </form>
+</body>
+</html>

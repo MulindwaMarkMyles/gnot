@@ -108,3 +108,16 @@
 .show {
         opacity: 1;
 }
+.submit-button {
+        position:fixed;
+        bottom:20px;
+        right:20px;
+        padding:5px 10px;
+        outline:none;
+        border:none;
+        font-family: "Poppins";
+        font-size:15px;
+        border-radius: 3px;
+        background-color: black;
+        color:white;
+}

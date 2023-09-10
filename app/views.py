@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Note
 
 
@@ -11,7 +11,17 @@ def app(request):
 
 
 def addnotes(request):
-    return render(request, "addnotes.html", {"notes": notes})
+    if request.method == "POST":
+        note_title = request.POST["note_title"]
+        the_note = request.POST["the_note"]
+        if the_note:
+            theNote = Note(title=note_title, content=the_note)
+            theNote.save()
+            return redirect("home_page")
+        else:
+            return render(request, "addnotes.html")
+    else:
+        return render(request, "addnotes.html")
 
 
 def viewnote(request, id):

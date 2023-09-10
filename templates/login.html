@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CREDENTIALS</title>
+        <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+</head>
+<body>
+        <form method="POST">
+                {% csrf_token %}
+                <div class="the_form">
+                        <span>LOGIN</span>
+                        <input type="text" name="username" class="username" placeholder="username">
+                        <input type="text" name="password" class="password" placeholder="Password">
+                        <input type="Submit">
+                </div>
+        </form>
+</body>
+</html>
