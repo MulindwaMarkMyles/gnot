@@ -17,6 +17,7 @@ def register(request):
         first_name = request.POST["firstname"]
         sur_name = request.POST["surname"]
         user_name = request.POST["username"]
-        password = request.POST["password"]
+        email = request.POST["email"]
+        password = request.POST["password2"]
 
     return render(request, "register.html")

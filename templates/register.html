@@ -8,14 +8,16 @@
         <link rel="stylesheet" href="{% static 'styles/register.css' %}">
 </head>
 <body>
-        <form method="POST">
+        <form aciton="register" method="POST">
                 {% csrf_token %}
                 <div class="the_form">
                         <span>REGISTER</span>
                         <input type="text" name="firstname" class="firstName" placeholder="First name">
                         <input type="text" name="surname" class="surName" placeholder="Surname">
                         <input type="text" name="username" class="userName" placeholder="username">
-                        <input type="text" name="password" class="password" placeholder="Password">
+                        <input type="text" name="email" class="email" placeholder="Email">
+                        <input type="text" name="password1" class="password" placeholder="Password">
+                        <input type="text" name="password2" class="password" placeholder="Re-enter the password">
                         <input type="Submit">
                 </div>
         </form>
