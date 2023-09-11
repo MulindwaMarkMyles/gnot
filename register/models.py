@@ -6,7 +6,7 @@ class User(models.Model):
     image = models.ImageField(upload_to='pics')
     username = models.CharField(default="user")
     surname = models.CharField(max_length=100)
-    email = models.CharField(max_length=150)
+    email = models.CharField(max_length=1)
     password = models.CharField()
     
     

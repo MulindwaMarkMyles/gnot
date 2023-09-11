@@ -8,13 +8,16 @@
         <link rel="stylesheet" href="{% static 'styles/login.css' %}">
 </head>
 <body>
-        <form method="POST">
+        <form  method="POST">
                 {% csrf_token %}
                 <div class="the_form">
                         <span>LOGIN</span>
                         <input type="text" name="username" class="username" placeholder="username">
-                        <input type="text" name="password" class="password" placeholder="Password">
+                        <input type="password" name="password" class="password" placeholder="Password">
                         <input type="Submit">
+                        {% for message in messages %}
+                        <h3 class="message">{{ message }}</h3>
+                        {% endfor %}
                 </div>
         </form>
 </body>

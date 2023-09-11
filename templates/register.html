@@ -16,10 +16,14 @@
                         <input type="text" name="surname" class="surName" placeholder="Surname">
                         <input type="text" name="username" class="userName" placeholder="username">
                         <input type="text" name="email" class="email" placeholder="Email">
-                        <input type="text" name="password1" class="password" placeholder="Password">
-                        <input type="text" name="password2" class="password" placeholder="Re-enter the password">
+                        <input type="password" name="password1" class="password" placeholder="Password">
+                        <input type="password" name="password2" class="password" placeholder="Re-enter the password">
                         <input type="Submit">
+                        {% for message in messages %}
+                        <h3 class="message">{{ message }}</h3>
+                        {% endfor %}
                 </div>
         </form>
+        
 </body>
 </html>
